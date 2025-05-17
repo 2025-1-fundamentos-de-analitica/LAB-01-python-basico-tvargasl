@@ -19,7 +19,7 @@ def pregunta_06():
         
     
     import csv
-    with open(r'C:\Users\tomas\semestre2025-1\fundamentosAnalitica\LAB-01-python-basico-tvargasl\files\input\data.csv', newline='', encoding='utf-8') as csvfile:
+    with open('C:/Users/tomas/semestre2025-1/fundamentosAnalitica/LAB-01-python-basico-tvargasl/files/input/data.csv', newline='', encoding='utf-8') as csvfile:
         lector = csv.reader(csvfile)
         diccionario = {"aaa":[0, 100000], "bbb":[0, 100000], "ccc":[0, 100000], "ddd":[0, 100000], "eee":[0, 100000],
                        "fff":[0, 100000], "ggg":[0, 100000], "hhh":[0, 100000], "iii":[0, 100000], "jjj":[0, 100000], }

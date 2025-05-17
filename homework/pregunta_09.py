@@ -8,7 +8,7 @@ utilizar pandas, numpy o scipy.
 
 def pregunta_09():
     import csv
-    with open(r'C:\Users\tomas\semestre2025-1\fundamentosAnalitica\LAB-01-python-basico-tvargasl\files\input\data.csv', newline='', encoding='utf-8') as csvfile:
+    with open('C:/Users/tomas/semestre2025-1/fundamentosAnalitica/LAB-01-python-basico-tvargasl/files/input/data.csv', newline='', encoding='utf-8') as csvfile:
         lector = csv.reader(csvfile)
         diccionario = {"aaa":0, "bbb":0, "ccc":0, "ddd":0, "eee":0,
                        "fff":0, "ggg":0, "hhh":0, "iii":0, "jjj":0, }
