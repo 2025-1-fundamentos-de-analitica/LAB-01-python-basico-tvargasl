@@ -8,7 +8,9 @@ utilizar pandas, numpy o scipy.
 
 def pregunta_10():
     import csv
-    with open('C:/Users/tomas/semestre2025-1/fundamentosAnalitica/LAB-01-python-basico-tvargasl/files/input/data.csv', newline='', encoding='utf-8') as csvfile:
+    from pathlib import Path
+    ruta = Path(__file__).parent.parent / 'files' / 'input' / 'data.csv'
+    with open(ruta, newline='', encoding='utf-8') as csvfile:
         lector = csv.reader(csvfile)
         lista = []
         for fila in lector:

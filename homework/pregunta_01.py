@@ -8,11 +8,15 @@ utilizar pandas, numpy o scipy.
 
 def pregunta_01():
     import csv
+    from pathlib import Path
+
+    ruta = Path(__file__).parent.parent / 'files' / 'input' / 'data.csv'
+
     suma = 0
-    with open('C:/Users/tomas/semestre2025-1/fundamentosAnalitica/LAB-01-python-basico-tvargasl/files/input/data.csv', newline='', encoding='utf-8') as csvfile:
+    with open(ruta, newline='', encoding='utf-8') as csvfile:
         lector = csv.reader(csvfile)
         for fila in lector:
             a = fila[0].split()
             suma += int(a[1])
             
-        return suma    
+        return suma 
