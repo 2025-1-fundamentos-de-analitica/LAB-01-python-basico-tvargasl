@@ -7,7 +7,24 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_02():
-    """
+    import csv
+    with open(r'C:\Users\tomas\semestre2025-1\fundamentosAnalitica\LAB-01-python-basico-tvargasl\files\input\data.csv', newline='', encoding='utf-8') as csvfile:
+        lector = csv.reader(csvfile)
+        diccionario = {"A":0, "B":0, "C":0, "D":0, "E":0 }
+        for fila in lector:
+            a = fila[0].split()
+            letra = a[0]
+            diccionario[letra] = diccionario[letra] + 1
+        return([('A', diccionario["A"]), ('B', diccionario["B"]), ('C', diccionario["C"]), ('D', diccionario["D"]), ('E', diccionario["E"])])
+
+
+
+
+
+
+
+
+"""
     Retorne la cantidad de registros por cada letra de la primera columna como
     la lista de tuplas (letra, cantidad), ordendas alfabéticamente.
 

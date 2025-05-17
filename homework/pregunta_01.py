@@ -7,10 +7,13 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_01():
-    """
-    Retorne la suma de la segunda columna.
+    import csv
+    suma = 0
+    with open(r'C:\Users\tomas\semestre2025-1\fundamentosAnalitica\LAB-01-python-basico-tvargasl\files\input\data.csv', newline='', encoding='utf-8') as csvfile:
+        lector = csv.reader(csvfile)
+        for fila in lector:
+            a = fila[0].split()
+            suma += int(a[1])
 
-    Rta/
-    214
-
-    """
+    return suma
+    

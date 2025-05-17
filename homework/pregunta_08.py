@@ -7,7 +7,29 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_08():
-    """
+    import csv
+    with open(r'C:\Users\tomas\semestre2025-1\fundamentosAnalitica\LAB-01-python-basico-tvargasl\files\input\data.csv', newline='', encoding='utf-8') as csvfile:
+        lector = csv.reader(csvfile)
+        diccionario = {"0":[], "1":[], "2":[], "3":[], "4":[], "5":[], "6":[], "7":[], "8":[], "9":[], }
+        for fila in lector:
+            a = fila[0].split()
+            letra = a[0]
+            numero = a[1]
+            if letra not in diccionario[numero]:
+                diccionario[numero].append(letra)
+
+        return([(0, sorted(diccionario["0"])),
+                (1, sorted(diccionario["1"])),
+                (2, sorted(diccionario["2"])),
+                (3, sorted(diccionario["3"])),
+                (4, sorted(diccionario["4"])),
+                (5, sorted(diccionario["5"])),
+                (6, sorted(diccionario["6"])),
+                (7, sorted(diccionario["7"])),
+                (8, sorted(diccionario["8"])),
+                (9, sorted(diccionario["9"]))])
+
+"""
     Genere una lista de tuplas, donde el primer elemento de cada tupla
     contiene  el valor de la segunda columna; la segunda parte de la tupla
     es una lista con las letras (ordenadas y sin repetir letra) de la

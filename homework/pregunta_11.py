@@ -7,7 +7,31 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_11():
-    """
+    import csv
+    with open(r'C:\Users\tomas\semestre2025-1\fundamentosAnalitica\LAB-01-python-basico-tvargasl\files\input\data.csv', newline='', encoding='utf-8') as csvfile:
+        lector = csv.reader(csvfile)
+        diccionario = {"a":0, "b":0, "c":0, "d":0, "e":0, "f":0, "g":0}
+        for fila in lector:
+            a = fila[0].split()
+            numero = int(a[1])
+            primera = a[3]
+            diccionario[primera] += numero
+            for i in range(1, len(fila)):
+                if len(fila[i]) == 1:
+                    diccionario[fila[i]] += numero
+                else:
+                    letra = fila[i].split()[0]
+                    diccionario[letra] += numero
+                    break
+
+
+        return(diccionario)
+
+
+print(pregunta_11())
+
+
+"""
     Retorne un diccionario que contengan la suma de la columna 2 para cada
     letra de la columna 4, ordenadas alfabeticamente.
 
