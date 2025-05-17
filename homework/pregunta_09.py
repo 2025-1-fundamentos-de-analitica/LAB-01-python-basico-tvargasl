@@ -24,9 +24,7 @@ def pregunta_09():
                     cadena = partes[0]
                     diccionario[cadena] += 1
 
-        return(diccionario)
-
-print(pregunta_09())    
+        return(diccionario)  
 """
     Retorne un diccionario que contenga la cantidad de registros en que
     aparece cada clave de la columna 5.

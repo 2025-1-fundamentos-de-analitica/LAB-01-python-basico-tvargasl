@@ -28,9 +28,6 @@ def pregunta_11():
         return(diccionario)
 
 
-print(pregunta_11())
-
-
 """
     Retorne un diccionario que contengan la suma de la columna 2 para cada
     letra de la columna 4, ordenadas alfabeticamente.
